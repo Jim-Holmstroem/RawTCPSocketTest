@@ -170,7 +170,7 @@ int main(int argc, char **argv) {
       error("ERROR on gethostbyaddr");
     printf("%s\n", hostp->h_name);
 
-    printf("    |     hostaddrp=");
+    printf("    |    hostaddrp=");
     fflush(stdout);
     hostaddrp = inet_ntoa(clientaddr.sin_addr);
     if (hostaddrp == NULL)
@@ -188,7 +188,7 @@ int main(int argc, char **argv) {
     if (n < 0)
       error("ERROR reading from socket");
 
-    printf("%s]@%s\n", buf, n);
+    printf("%s]\n", buf);
 
     /*
      * write: echo the input string back to the client
@@ -199,7 +199,7 @@ int main(int argc, char **argv) {
     n = write(childfd, buf, strlen(buf));
     if (n < 0)
       error("ERROR writing to socket");
-    printf("%s]@%s\n", buf, n);
+    printf("%s]\n", buf);
 
     printf("    |closing\n");
     close(childfd);
