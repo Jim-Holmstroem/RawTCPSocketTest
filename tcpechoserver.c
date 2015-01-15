@@ -188,7 +188,7 @@ int main(int argc, char **argv) {
     if (n < 0)
       error("ERROR reading from socket");
 
-    prinf("%s]@%s\n", buf, n);
+    printf("%s]@%s\n", buf, n);
 
     /*
      * write: echo the input string back to the client
@@ -199,7 +199,7 @@ int main(int argc, char **argv) {
     n = write(childfd, buf, strlen(buf));
     if (n < 0)
       error("ERROR writing to socket");
-    prinf("%s]@%s\n", buf, n);
+    printf("%s]@%s\n", buf, n);
 
     printf("    |closing\n");
     close(childfd);
