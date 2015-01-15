@@ -7,7 +7,7 @@ WORKDIR /usr/src/tcpechoserver
 
 RUN gcc -o tcpechoserver tcpechoserver.c
 
-ENV TCPECHOSERVER_PORT=5000
+ENV TCPECHOSERVER_PORT 5000
 
 CMD "/opt/tcpechoserver/service/tcpechoserver", "5000"]
 
