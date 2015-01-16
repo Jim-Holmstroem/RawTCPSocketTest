@@ -7,8 +7,8 @@ WORKDIR /usr/src/tcpechoserver
 
 RUN gcc -o /usr/bin/tcpechoserver /usr/src/tcpechoserver/tcpechoserver.c
 
-ENV TCPECHOSERVER_PORT 5000
+ENV PORT 5000
 
-CMD [ "/usr/bin/tcpechoserver", "5000" ]
+CMD /usr/bin/tcpechoserver $PORT
 
 EXPOSE 5000
