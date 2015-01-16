@@ -1,4 +1,4 @@
-PORT=12345
+PORT=5000
 
 tcpechoserver: tcpechoserver.c
 	gcc tcpechoserver.c -o tcpechoserver
