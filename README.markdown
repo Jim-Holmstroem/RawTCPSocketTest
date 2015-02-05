@@ -11,13 +11,22 @@ In another shell
 make test
 ```
 
-Dockerfile
-==========
-To make it runnable in docker.
+Docker
+======
+https://registry.hub.docker.com/u/jimho/tcp-echo
+```shell
+docker pull jimho/tcp-echo
+```
 
-Also makes it possible to push it to a DEIS cluster.
+or build it yourself
+
+```shell
+docker build -t tcp-echo .
+```
+
+DEIS
+====
 ```shell
 deis create
 git push deis master
 ```
-[Install DEIS-1.2.0](https://gist.github.com/Jim-Holmstroem/c4411fa2d9a639f1896c)
